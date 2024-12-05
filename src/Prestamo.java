@@ -5,7 +5,7 @@ public class Prestamo {
 
         }
 
-        public static void consultarPrestamo(){
+        public static void consultarPrestamos(){
 
         }
 
@@ -13,13 +13,10 @@ public class Prestamo {
 
         }
 
-
-
-
+        public static void contultarDisponibilidadLibros(){
+            System.out.println("");
+        }
         
 
-        public static void contultarLibro(){
-
-        }
     }
 }

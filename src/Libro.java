@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Libro {
 
     private static int contador = 1;
@@ -11,6 +14,14 @@ public class Libro {
         this.autor = autor;
         this.disponibilidad = disponibilidad;
         this.id = contador++;
+    }
+
+    public static List<Libro> listaLibroa = new ArrayList<Libro>();
+    static{
+        listaLibroa.add(new Libro("Gabriel García Márquez", "Cien Años de Soledad", true));
+        listaLibroa.add(new Libro("George Orwell", "1984", true));
+        listaLibroa.add(new Libro("Miguel de Cervantes", "El Quijote", true));
+        listaLibroa.add(new Libro("Antoine de Saint-Exupéry", "El Principito", true));
     }
 
     public int getId() {

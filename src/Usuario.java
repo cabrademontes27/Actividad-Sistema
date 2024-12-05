@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Usuario {
+
     private String nombre;
     private String correoElectronico;
     private String contrasena;
@@ -12,6 +16,23 @@ public class Usuario {
         this.correoElectronico = correoElectronico;
         this.contrasena = contrasena;
         this.id = contador++;
+    }
+
+    public static List<Usuario> listaDeUsuarios = new ArrayList<Usuario>();
+    static{
+        listaDeUsuarios.add(new Usuario("Luis Cabrera", "zs22017032@estudiantes.uv.mx", "1234", "estudiante"));
+        listaDeUsuarios.add(new Usuario("Pino Herrera", "jherrera@uv.mx", "1234", "maestro"));
+        listaDeUsuarios.add(new Usuario("Josea Antonio", "jvergara@uv.mx", "1234", "maestro"));
+        listaDeUsuarios.add(new Usuario("Alejandra", "zs22017015@estudiantes.uv.mx", "1234", "estudiante"));
+    }
+
+    
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getNombre() {
