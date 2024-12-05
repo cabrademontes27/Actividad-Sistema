@@ -70,23 +70,18 @@ public class UIMenu {
     public void menuPrincipal(){
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("\n ¿Que desea hacer primero?");
+        System.out.println("\n ¿Que desea hacer?");
         System.out.println("\n 1) Consultar libros disponibles \n 2) Solicitar Prestamo \n 3) Devolver Libro \n 4) Consultar prestamos \n 5) Salir");
         //no le metan otro cosa que no sea numero por que truena xd
         int opciones = entrada.nextInt();
         switch (opciones) {
-            case 1:Prestamo.Acciones.contultarDisponibilidadLibros();break;
-            case 2:Prestamo.Acciones.solicitarPrestamo();break;
-            case 3:Prestamo.Acciones.liquidarPrestamo();break;
-            case 4:Prestamo.Acciones.consultarPrestamos();break;
+            case 1:Prestamo.Acciones.consultarDisponibilidadLibros(); menuPrincipal();;break;
+            case 2:Prestamo.Acciones.solicitarPrestamo(); menuPrincipal();break;
+            case 3:Prestamo.Acciones.liquidarPrestamo();menuPrincipal();break;
+            case 4:Prestamo.Acciones.consultarPrestamos();menuPrincipal();break;
             case 5:System.out.println("Hasta luego....");break;
         
             default:System.out.println("Ninguna de las opciones coincide, intetelo de nuevo");break;
         }
     }
-    public void menuPrestamo(){
-
-    }
-
-
 }
